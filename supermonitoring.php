@@ -39,6 +39,7 @@ class Supermonitoring extends Module
         $this->tab = 'administration';
         $this->version = '1.0.0';
         $this->author = 'SITEIMPULSE';
+        $this->module_key = '8a2d8ef33f5363c926e702c552739c36';
         $this->need_instance = 0;
 
         $this->bootstrap = true;
@@ -62,7 +63,7 @@ class Supermonitoring extends Module
         }
 
         return parent::install() &&
-            $this->registerHook('backOfficeHeader');
+            $this->registerHook('actionAdminControllerSetMedia');
     }
 
     public function uninstall()
