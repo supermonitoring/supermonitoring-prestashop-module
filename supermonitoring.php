@@ -37,7 +37,7 @@ class Supermonitoring extends Module
     {
         $this->name = 'supermonitoring';
         $this->tab = 'administration';
-        $this->version = '1.0.0';
+        $this->version = '1.2.0';
         $this->author = 'SITEIMPULSE';
         $this->module_key = '8a2d8ef33f5363c926e702c552739c36';
         $this->need_instance = 0;
@@ -178,7 +178,7 @@ class Supermonitoring extends Module
         }
     }
 
-    public function hookBackOfficeHeader()
+    public function hookActionAdminControllerSetMedia()
     {
         $this->context->controller->addCSS($this->_path.'views/css/back.css');
     }
